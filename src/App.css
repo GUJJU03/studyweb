@@ -1,0 +1,43 @@
+
+body {
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #000000;
+    --sb-size: 7px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 7px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 7px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+nav{
+    font-weight: 500;
+    font-family: 'Maven Pro', sans-serif;
+}
+body{
+    font-family: 'Maven Pro', sans-serif;
+}
+
